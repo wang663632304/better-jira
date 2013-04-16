@@ -5,6 +5,7 @@
     tools:context=".MainScreenActivity" >
 
     <!-- Login progress -->
+
     <LinearLayout
         android:id="@+id/login_status"
         android:layout_width="wrap_content"
@@ -13,11 +14,13 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:visibility="gone" >
+
         <ProgressBar
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp" />
+
         <TextView
             android:id="@+id/login_status_message"
             android:layout_width="wrap_content"
@@ -28,6 +31,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
     <!-- Login form -->
+
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
@@ -39,25 +43,27 @@
             android:orientation="vertical" >
 
             <LinearLayout
+                android:id="@+id/LinearLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
                 <Button
                     android:id="@+id/button1"
-                    android:layout_width="92dp"
-                    android:layout_height="40dp"
-                    android:text="@string/http://" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/http" />
 
                 <AutoCompleteTextView
                     android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="@string/app_name" >
+                    android:hint="@string/url" >
 
                     <requestFocus />
                 </AutoCompleteTextView>
-
             </LinearLayout>
 
             <EditText
@@ -68,6 +74,7 @@
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:singleLine="true" />
+
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
@@ -89,7 +96,6 @@
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
                 android:text="@string/action_sign_in_register" />
-
         </LinearLayout>
     </ScrollView>
 
