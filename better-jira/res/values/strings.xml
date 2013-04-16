@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BetterJira</string>
+    <string name="http">http://</string>
+    <string name="url">Projekt URL</string>
 </resources>
