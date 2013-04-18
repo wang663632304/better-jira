@@ -51,6 +51,7 @@
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+		    android:background="@drawable/custom_button"
                     android:text="@string/http" />
 
                 <AutoCompleteTextView
@@ -94,6 +95,7 @@
                 android:layout_marginTop="16dp"
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
+		android:background="@drawable/custom_button"
                 android:text="@string/action_sign_in_register" />
         </LinearLayout>
     </ScrollView>
