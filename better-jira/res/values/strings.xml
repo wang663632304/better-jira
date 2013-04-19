@@ -2,4 +2,7 @@
     <string name="app_name">BetterJira</string>
     <string name="http">http://</string>
     <string name="url">Projekt URL</string>
+    <string name="sktót">BET</string>
+    <string name="projekt">Nazwa projektu</string>
+    <string name="nic">      </string>
 </resources>
