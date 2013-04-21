@@ -41,6 +41,13 @@
             android:layout_width="match_parent"
             android:orientation="vertical" >
 
+            <ImageView
+                android:id="@+id/imageView1"
+                android:contentDescription="@string/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" />
+
             <LinearLayout
                 android:id="@+id/LinearLayout1"
                 android:layout_width="match_parent"
@@ -97,6 +104,19 @@
                 android:paddingRight="32dp"
 		android:background="@drawable/custom_button"
                 android:text="@string/action_sign_in_register" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Save" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Auto" />
+
         </LinearLayout>
     </ScrollView>
 
