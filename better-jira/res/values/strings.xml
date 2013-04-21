@@ -2,7 +2,10 @@
     <string name="app_name">BetterJira</string>
     <string name="http">http://</string>
     <string name="url">Projekt URL</string>
-    <string name="sktót">BET</string>
+    <string name="skrót">BET</string>
     <string name="projekt">Nazwa projektu</string>
     <string name="nic">      </string>
+    <string name="ikona">ikona_taska</string>
+    <string name="priorytet">ikona_priorytetu</string>
+    <string name="skrót2">BET-1</string>
 </resources>

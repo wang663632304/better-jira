@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	    
+	    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+	        <ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="5dip"
+	            android:contentDescription="@string/ikona"
+	            android:src="@drawable/task" />
+
+     	   <TextView
+    	        android:id="@+id/textView1"
+        	    android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+	            android:text="@string/skrót2"
+        	    android:textAppearance="?android:attr/textAppearanceLarge" />
+     	   
+     	   <ImageView
+ 	           android:id="@+id/imageView2"
+ 	           android:layout_width="wrap_content"
+ 	           android:layout_height="wrap_content"
+	           android:layout_margin="5dip"
+	           android:layout_marginRight="5dp"
+ 	           android:contentDescription="@string/priorytet"
+ 	           android:src="@drawable/priority_critical" />
+
+ 	       <TextView
+    	        android:id="@+id/textView3"
+        	    android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+    	        android:text="@string/projekt"
+        	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </TableRow>
+</LinearLayout>

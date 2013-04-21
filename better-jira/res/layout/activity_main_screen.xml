@@ -1,7 +1,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainScreenActivity" >
 
     <!-- Login progress -->
@@ -39,6 +39,7 @@
         <LinearLayout
             style="@style/LoginFormContainer"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <ImageView
@@ -62,7 +63,7 @@
                     android:text="@string/http" />
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView1"
+                    android:id="@+id/url"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -73,15 +74,14 @@
                 </AutoCompleteTextView>
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/email"
+            <AutoCompleteTextView
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress"
+                android:hint="@string/login"
                 android:maxLines="1"
-                android:singleLine="true" />
-
+                android:singleLine="true" >
+			</AutoCompleteTextView>
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
