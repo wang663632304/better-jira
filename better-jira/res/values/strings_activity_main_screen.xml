@@ -11,6 +11,7 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <!-- Strings created by me --> 
     <string name="Auto">Auto logowanie</string>
     <string name="Save">Zapamiętaj dane</string>
     <string name="logo">Better Jira</string>
