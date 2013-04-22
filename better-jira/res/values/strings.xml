@@ -4,11 +4,14 @@
     <string name="url">Projekt URL</string>
     <string name="skrót">BET</string>
     <string name="projekt">Nazwa projektu</string>
+    <string name="task">Nazwa zadania</string>
     <string name="nic">      </string>
     <string name="ikona">ikona_taska</string>
     <string name="priorytet">ikona_priorytetu</string>
     <string name="skrót2">BET-1</string>
     <string name="avatar_proj">avatar</string>               
+    <string name="opis">opis zadania</string>
+    <string name="kogo">Imie Nazwisko</string>
     <string />
     <string />
 </resources>
