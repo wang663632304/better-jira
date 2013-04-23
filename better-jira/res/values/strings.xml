@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BetterJira</string>
     <string name="http">http://</string>
+    <string name="description">opis</string>
     <string name="url">Projekt URL</string>
     <string name="skrót">BET</string>
     <string name="projekt">Nazwa projektu</string>
@@ -10,10 +11,12 @@
     <string name="priorytet">ikona_priorytetu</string>
     <string name="skrót2">BET-1</string>
     <string name="avatar_proj">avatar</string>               
-    <string name="opis">opis zadania</string>
+    <string name="opis">Opis zadania</string>
     <string name="kogo">Imie Nazwisko</string>
-    <string name="komentarz">komentarz</string>
+    <string name="komentarz">Komentarz</string>
     <string name="data_kom">02.02.2014</string>
     <string name="komentator">Imie Nazwisko</string>
-    <string />
+    <string name="no_filters">Brak filtrów</string>
+    <string name="filters">Nazwa filtru</string>
+    <string name="no_task">Brak zadań</string>
 </resources>
