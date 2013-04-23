@@ -2,7 +2,7 @@
     <string name="app_name">BetterJira</string>
     <string name="http">http://</string>
     <string name="description">opis</string>
-    <string name="url">Projekt URL</string>
+    <string name="url">http://example.com:80</string>
     <string name="skrót">BET</string>
     <string name="projekt">Nazwa projektu</string>
     <string name="task">Nazwa zadania</string>
@@ -19,4 +19,7 @@
     <string name="no_filters">Brak filtrów</string>
     <string name="filters">Nazwa filtru</string>
     <string name="no_task">Brak zadań</string>
+    <string name="invalid_url">Invalid url</string>
+    <string name="enter_login">Enter login</string>
+    <string name="enter_password">Enter password</string>
 </resources>

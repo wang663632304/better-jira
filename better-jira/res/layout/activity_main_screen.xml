@@ -14,16 +14,17 @@
             android:contentDescription="@string/logo"
             android:src="@drawable/logo" />
         <AutoCompleteTextView
-            android:id="@+id/url"
+            android:id="@+id/autoCompleteTextViewUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:text="https://jira.wmi.amu.edu.pl/"
             android:hint="@string/url" >
             <requestFocus />
         </AutoCompleteTextView>
         <AutoCompleteTextView
-            android:id="@+id/login"
+            android:id="@+id/autoCompleteTextViewLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login"
@@ -31,7 +32,7 @@
             android:singleLine="true" >
         </AutoCompleteTextView>
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/prompt_password"
@@ -42,7 +43,7 @@
             android:maxLines="1"
             android:singleLine="true" />
         <Button
-            android:id="@+id/sign_in_button"
+            android:id="@+id/buttonLogin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"
