@@ -1,4 +1,10 @@
 <resources>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="logo">Better Jira</string>
+    <string name="login">Login</string>
     <string name="app_name">BetterJira</string>
     <string name="http">http://</string>
     <string name="description">opis</string>
@@ -6,11 +12,11 @@
     <string name="skrót">BET</string>
     <string name="projekt">Nazwa projektu</string>
     <string name="task">Nazwa zadania</string>
-    <string name="nic">      </string>
+    <string name="nic"></string>
     <string name="ikona">ikona_taska</string>
     <string name="priorytet">ikona_priorytetu</string>
     <string name="skrót2">BET-1</string>
-    <string name="avatar_proj">avatar</string>               
+    <string name="avatar_proj">avatar</string>
     <string name="opis">Opis zadania</string>
     <string name="kogo">Imie Nazwisko</string>
     <string name="komentarz">Komentarz</string>
@@ -22,4 +28,8 @@
     <string name="invalid_url">Invalid url</string>
     <string name="enter_login">Enter login</string>
     <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="automaticly_login">Automaticly login</string>
+    <string name="save_form">Save form</string>
+    <string name="login">Login</string>
 </resources>

@@ -9,7 +9,7 @@
         android:orientation="vertical" >
         <!-- Commentator name -->
         <TextView
-            android:id="@+id/UserTextView"
+            android:id="@+id/textViewAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -18,7 +18,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
         <!-- Date of comment -->
         <TextView
-            android:id="@+id/DateTextView"
+            android:id="@+id/textViewDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -27,7 +27,7 @@
     </RelativeLayout>
     <!-- Comment shown in row -->
     <TextView
-        android:id="@+id/CommentTextView1"
+        android:id="@+id/textViewBody"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
