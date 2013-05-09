@@ -3,8 +3,9 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     <TextView
-        android:id="@+id/descriprion"
+        android:id="@+id/TextViewDescriprion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/description" />
+        android:text="@string/description"
+        android:textSize="18sp" />
 </LinearLayout>

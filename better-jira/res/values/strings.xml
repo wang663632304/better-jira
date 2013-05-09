@@ -4,13 +4,12 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="logo">Better Jira</string>
-    <string name="login">Login</string>
     <string name="app_name">BetterJira</string>
     <string name="http">http://</string>
-    <string name="description">opis</string>
+    <string name="description">Description</string>
     <string name="url">http://example.com:80</string>
-    <string name="skrót">BET</string>
-    <string name="projekt">Nazwa projektu</string>
+    <string name="key">PROJECT-KEY</string>
+    <string name="project_name">Project name</string>
     <string name="task">Nazwa zadania</string>
     <string name="nic"></string>
     <string name="ikona">ikona_taska</string>
@@ -32,4 +31,6 @@
     <string name="automaticly_login">Automaticly login</string>
     <string name="save_form">Save form</string>
     <string name="login">Login</string>
+    <string name="send">Send</string>
+    
 </resources>
