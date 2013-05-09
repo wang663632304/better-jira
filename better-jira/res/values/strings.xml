@@ -32,5 +32,6 @@
     <string name="save_form">Save form</string>
     <string name="login">Login</string>
     <string name="send">Send</string>
-    
+    <string name="lead">Lead</string>
+    <string name="project_icon">Project Icon</string>      
 </resources>

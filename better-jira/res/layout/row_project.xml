@@ -1,19 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <TextView
-        android:id="@+id/textViewKey"
-        android:layout_width="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/key"
-        android:textSize="18sp"  />
+        android:orientation="vertical" >
+        <ImageView
+            android:id="@+id/imageViewProjectIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/project_icon"
+            android:src="@android:drawable/btn_dialog" />
+        <TextView
+            android:id="@+id/textViewProjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/project_name"
+            android:layout_toRightOf="@+id/imageViewProjectIcon"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textViewUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewProjectName"
+            android:layout_toRightOf="@+id/imageViewProjectIcon"
+            android:text="@string/url"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textViewLead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewUrl"
+            android:layout_toRightOf="@+id/imageViewProjectIcon"
+            android:text="@string/lead"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textViewProjectName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/project_name"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textViewKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewLead"
+            android:layout_toRightOf="@+id/imageViewProjectIcon"
+            android:text="@string/key"
+            android:textSize="18sp" />
 
-</LinearLayout>
+</RelativeLayout>
