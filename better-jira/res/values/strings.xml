@@ -9,6 +9,7 @@
     <string name="description">Description</string>
     <string name="url">http://example.com:80</string>
     <string name="key">PROJECT-KEY</string>
+    <string name="key_issue">ISSUE-KEY</string>
     <string name="project_name">Project name</string>
     <string name="task">Nazwa zadania</string>
     <string name="nic"></string>
@@ -33,5 +34,9 @@
     <string name="login">Login</string>
     <string name="send">Send</string>
     <string name="lead">Lead</string>
-    <string name="project_icon">Project Icon</string>      
+    <string name="project_icon">Project Icon</string>
+    <string name="assigne">Assigne</string>
+    <string name="reporter">Reporter</string>
+    <string name="filter_name">Filter name</string>
+    <string name="filter">JQL JQL JQL JQL</string>    
 </resources>

@@ -3,18 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
+    <!-- Name of filter -->
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Filter name"
+        android:text="@string/filter_name"
         android:textSize="20sp" />
+    <!-- I don`t know ??? -->
     <TextView
         android:id="@+id/textViewJQL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="15dp"
-        android:text="JQL JQL JQL JQL"
+        android:text="@string/filter"
         android:textColor="@color/DarkGray"
         android:textSize="14sp" />
 </LinearLayout>

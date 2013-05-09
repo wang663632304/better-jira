@@ -2,22 +2,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <!-- Issuw Key -->
     <TextView
         android:id="@+id/textViewIssueKey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ISSUE-KEY"
+        android:text="@string/key_issue"
         android:textSize="18sp" />
+    <!-- Assigne name -->
     <TextView
         android:id="@+id/textViewAssigne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Assigne"
+        android:text="@string/assigne"
         android:textSize="18sp" />
+    <!-- Reporter name -->
     <TextView
         android:id="@+id/textViewReporter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reporter"
+        android:text="@string/reporter"
         android:textSize="18sp" />
 </LinearLayout>

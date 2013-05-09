@@ -2,6 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+    <!-- Task Description -->
     <TextView
         android:id="@+id/TextViewDescriprion"
         android:layout_width="wrap_content"
