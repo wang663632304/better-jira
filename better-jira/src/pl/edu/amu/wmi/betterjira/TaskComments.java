@@ -44,7 +44,7 @@ public class TaskComments extends Activity implements OnItemClickListener,
 	send = (Button) findViewById(R.id.buttonSend);
 	send.setOnClickListener(this);
 
-	editText = (EditText) findViewById(R.id.editText1);
+	editText = (EditText) findViewById(R.id.editTextComment);
     }
 
     private class LoadComments extends AsyncTask<Void, Void, String> {
