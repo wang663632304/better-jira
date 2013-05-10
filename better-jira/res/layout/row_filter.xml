@@ -1,22 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
-    <!-- Name of filter -->
+    <!-- Name of filter (long clickable) -->
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="false"
+        android:longClickable="true"
         android:text="@string/filter_name"
-        android:textSize="20sp" />
-    <!-- I don`t know ??? -->
+        android:textSize="18sp" />
+    <!-- I don`t know ??? (long clickable) -->
     <TextView
         android:id="@+id/textViewJQL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName"
+        android:clickable="false"
+        android:longClickable="true"
         android:paddingLeft="15dp"
         android:text="@string/filter"
         android:textColor="@color/DarkGray"
         android:textSize="14sp" />
-</LinearLayout>
+	<!-- Edit filter invisible, behind filter name (should be visible when long click) -->
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteEditFilter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:ems="10"
+        android:gravity="top|center_vertical"
+        android:longClickable="true"
+        android:text="@string/filter"
+        android:textSize="18sp"
+        android:visibility="invisible" >
+        <requestFocus />
+    </AutoCompleteTextView>
+</RelativeLayout>
