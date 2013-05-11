@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/_textViewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test User"
+        android:textColor="@color/JiraStandardBlue"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/_textViewTimeSpent"
+        style="@style/JiraSubLabel"
+        android:layout_width="110sp"
+        android:layout_below="@id/_textViewUser"
+        android:layout_marginTop="10dp"
+        android:text="@string/time_spent_" />
+    <TextView
+        android:id="@+id/textViewTimeSpent"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewTimeSpent"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/_textViewTimeSpent"
+        android:text="5 minutes"
+        android:textColor="@color/Black" />
+    <TextView
+        android:id="@+id/_textViewDate"
+        style="@style/JiraSubLabel"
+        android:layout_width="110sp"
+        android:layout_below="@id/_textViewTimeSpent"
+        android:layout_marginTop="3dp"
+        android:text="@string/logged_work_" />
+    <TextView
+        android:id="@+id/textViewTimeSpent"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewDate"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/_textViewDate"
+        android:text="11/May/13 2:55 PM"
+        android:textColor="@color/Black" />
+</RelativeLayout>

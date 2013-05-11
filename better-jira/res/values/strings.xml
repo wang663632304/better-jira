@@ -46,5 +46,7 @@
     <string name="dates">Dates</string>
     <string name="created_">Created:</string>
     <string name="updated_">Updated:</string>
-    <string name="key_">KEY:</string>    
+    <string name="key_">KEY:</string>
+    <string name="time_spent_">Time Spent:</string>
+    <string name="logged_work_">Logged work:</string>    
 </resources>
