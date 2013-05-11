@@ -23,19 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="pl.edu.amu.wmi.betterjira.pages.FiltersActivity"
-            android:configChanges="orientation|keyboardHidden" >
-        </activity>
-        <activity
             android:name="pl.edu.amu.wmi.betterjira.PageIndicatorActivity"
-            android:configChanges="orientation|keyboardHidden" >
-        </activity>
-        <activity
-            android:name="pl.edu.amu.wmi.betterjira.TasksActivity"
-            android:configChanges="orientation|keyboardHidden" >
-        </activity>
-        <activity
-            android:name="pl.edu.amu.wmi.betterjira.TaskComments"
             android:configChanges="orientation|keyboardHidden" >
         </activity>
     </application>

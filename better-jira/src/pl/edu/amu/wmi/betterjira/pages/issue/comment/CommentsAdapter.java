@@ -1,7 +1,9 @@
-package pl.edu.amu.wmi.betterjira;
+package pl.edu.amu.wmi.betterjira.pages.issue.comment;
 
 import java.util.ArrayList;
 
+import pl.edu.amu.wmi.betterjira.BaseAdapterSnippet;
+import pl.edu.amu.wmi.betterjira.R;
 import pl.edu.amu.wmi.betterjira.api.function.data.Comment;
 import android.content.Context;
 import android.view.View;
@@ -10,10 +12,9 @@ import android.widget.TextView;
 public class CommentsAdapter extends BaseAdapterSnippet {
 
     private ArrayList<Comment> comments = new ArrayList<Comment>();
-    private Context context;
 
     public CommentsAdapter(Context context) {
-	this.context = context;
+	super(context);
     }
 
     @Override
@@ -28,8 +29,7 @@ public class CommentsAdapter extends BaseAdapterSnippet {
 
     @Override
     public View getInflatedRow(int position) {
-	// TODO refactor this create inflater in constructor
-	return View.inflate(context, R.layout.row_comment, null);
+	return getLayoutInflater().inflate(R.layout.row_comment, null);
     }
 
     @Override

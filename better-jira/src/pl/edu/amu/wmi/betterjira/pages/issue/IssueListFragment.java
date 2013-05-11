@@ -1,42 +1,59 @@
-package pl.edu.amu.wmi.betterjira;
+package pl.edu.amu.wmi.betterjira.pages.issue;
 
+import pl.edu.amu.wmi.betterjira.BetterJiraApplication;
+import pl.edu.amu.wmi.betterjira.PageIndicatorActivity;
+import pl.edu.amu.wmi.betterjira.R;
+import pl.edu.amu.wmi.betterjira.R.id;
+import pl.edu.amu.wmi.betterjira.R.layout;
 import pl.edu.amu.wmi.betterjira.api.function.SearchForIssues;
 import pl.edu.amu.wmi.betterjira.api.function.data.Issue;
 import pl.edu.amu.wmi.betterjira.api.function.data.IssueList;
 import pl.edu.amu.wmi.betterjira.api.function.exception.BadResponse;
 import pl.edu.amu.wmi.betterjira.api.function.exception.InvalidJQLCommand;
+import pl.edu.amu.wmi.betterjira.pages.Page;
+import pl.edu.amu.wmi.betterjira.pages.issue.comment.CommentsFragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class TasksActivity extends Activity implements OnItemClickListener {
+public class IssueListFragment extends Page implements OnItemClickListener {
+
+    public static final String EXTRA_JQL = "jql";
 
     private ListView listView;
-    private TasksAdapter adapter;
+    private IssueAdapter adapter;
     private String jql;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	    Bundle savedInstanceState) {
 
-	setContentView(R.layout.page_tasks);
+	if (getActivity().getIntent().getExtras() != null) {
+	    jql = getActivity().getIntent().getExtras().getString(EXTRA_JQL);
+	    if (jql == null) {
+		throw new RuntimeException("Give me JQL");
+	    }
+	} else {
+	    throw new RuntimeException("Give me JQL");
+	}
 
-	jql = getIntent().getExtras().getString("JQL");
-
-	listView = (ListView) findViewById(R.id.listView);
-
-	adapter = new TasksAdapter(this);
+	listView = new ListView(getActivity());
+	adapter = new IssueAdapter(getActivity());
 	listView.setAdapter(adapter);
 
 	LoadTasks loadTasks = new LoadTasks();
 	loadTasks.execute();
 
 	listView.setOnItemClickListener(this);
+
+	return listView;
     }
 
     private class LoadTasks extends AsyncTask<Void, Void, String> {
@@ -72,9 +89,15 @@ public class TasksActivity extends Activity implements OnItemClickListener {
     public void onItemClick(AdapterView<?> arg0, View arg1, int index, long arg3) {
 	Issue issue = (Issue) adapter.getItem(index);
 
-	Intent intent = new Intent(this, TaskComments.class);
-	intent.putExtra("KEY", issue.getKey());
-
+	Intent intent = new Intent(getActivity(), PageIndicatorActivity.class);
+	intent.putExtra(IssueFullInfoFragment.EXTRA_ISSUE_KEY, issue.getKey());
+	intent.putExtra(PageIndicatorActivity.EXTRA_TREE_NODE, getClass()
+		.getSimpleName());
 	startActivity(intent);
+    }
+
+    @Override
+    public String getTitle() {
+	return "Issue list";
     }
 }

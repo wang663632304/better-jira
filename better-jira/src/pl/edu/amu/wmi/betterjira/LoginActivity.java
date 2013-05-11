@@ -8,7 +8,7 @@ import pl.edu.amu.wmi.betterjira.api.function.BasicAuthentication;
 import pl.edu.amu.wmi.betterjira.api.function.data.Session;
 import pl.edu.amu.wmi.betterjira.api.function.exception.BadResponse;
 import pl.edu.amu.wmi.betterjira.api.function.exception.LoginException;
-import pl.edu.amu.wmi.betterjira.pages.FiltersActivity;
+import pl.edu.amu.wmi.betterjira.pages.filter.FiltersFragment;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -161,6 +161,8 @@ public class LoginActivity extends SherlockActivity implements OnClickListener {
 
 	    Intent intent = new Intent(LoginActivity.this,
 		    PageIndicatorActivity.class);
+	    intent.putExtra(PageIndicatorActivity.EXTRA_TREE_NODE,
+		    (String) null);
 	    LoginActivity.this.startActivity(intent);
 	}
     }

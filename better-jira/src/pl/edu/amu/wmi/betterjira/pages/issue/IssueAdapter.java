@@ -1,16 +1,17 @@
-package pl.edu.amu.wmi.betterjira;
+package pl.edu.amu.wmi.betterjira.pages.issue;
 
+import pl.edu.amu.wmi.betterjira.BaseAdapterSnippet;
+import pl.edu.amu.wmi.betterjira.R;
 import pl.edu.amu.wmi.betterjira.api.function.data.IssueList;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-public class TasksAdapter extends BaseAdapterSnippet {
+public class IssueAdapter extends BaseAdapterSnippet {
     private IssueList issueList = new IssueList();
-    private Context context;
 
-    public TasksAdapter(Context context) {
-	this.context = context;
+    public IssueAdapter(Context context) {
+	super(context);
     }
 
     @Override
@@ -25,8 +26,7 @@ public class TasksAdapter extends BaseAdapterSnippet {
 
     @Override
     public View getInflatedRow(int position) {
-	// TODO refactor this create inflater in constructor
-	return View.inflate(context, R.layout.row_task, null);
+	return getLayoutInflater().inflate(R.layout.row_task, null);
     }
 
     @Override

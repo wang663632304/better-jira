@@ -1,5 +1,7 @@
 package pl.edu.amu.wmi.betterjira;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -12,9 +14,24 @@ import android.widget.BaseAdapter;
  */
 public abstract class BaseAdapterSnippet extends BaseAdapter {
 
+    private LayoutInflater layoutInflater;
+    private Context context;
+
+    public BaseAdapterSnippet(Context context) {
+	this.context = context;
+    }
+
     @Override
     public long getItemId(int position) {
 	return position;
+    }
+
+    protected LayoutInflater getLayoutInflater() {
+	if (layoutInflater == null) {
+	    layoutInflater = (LayoutInflater) context
+		    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	}
+	return layoutInflater;
     }
 
     /**
@@ -61,7 +78,8 @@ public abstract class BaseAdapterSnippet extends BaseAdapter {
 	    int position);
 
     /**
-     * Simply initiate you fields in holder by findingViewById in view object
+     * Simply initiate your fields in holder by findViewById in view object. <br>
+     * <b>Eg.<br> holder.field = view.findViewById(0x01);</b>
      * 
      * @param holder
      * @param view

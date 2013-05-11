@@ -1,7 +1,11 @@
-package pl.edu.amu.wmi.betterjira;
+package pl.edu.amu.wmi.betterjira.pages.filter;
 
 import java.util.ArrayList;
 
+import pl.edu.amu.wmi.betterjira.BaseAdapterSnippet;
+import pl.edu.amu.wmi.betterjira.R;
+import pl.edu.amu.wmi.betterjira.R.id;
+import pl.edu.amu.wmi.betterjira.R.layout;
 import pl.edu.amu.wmi.betterjira.api.function.data.Filter;
 import android.content.Context;
 import android.view.View;
@@ -10,10 +14,9 @@ import android.widget.TextView;
 public class FiltersAdapter extends BaseAdapterSnippet {
 
     private ArrayList<Filter> filters = new ArrayList<Filter>();
-    private Context context;
 
     public FiltersAdapter(Context context) {
-	this.context = context;
+	super(context);
     }
 
     @Override
@@ -28,8 +31,7 @@ public class FiltersAdapter extends BaseAdapterSnippet {
 
     @Override
     public View getInflatedRow(int position) {
-	// TODO refactor this create inflater in constructor
-	return View.inflate(context, R.layout.row_filter, null);
+	return getLayoutInflater().inflate(R.layout.row_filter, null);
     }
 
     @Override

@@ -1,21 +1,25 @@
-package pl.edu.amu.wmi.betterjira;
+package pl.edu.amu.wmi.betterjira.pages.issue.comment;
 
+import pl.edu.amu.wmi.betterjira.BetterJiraApplication;
+import pl.edu.amu.wmi.betterjira.R;
 import pl.edu.amu.wmi.betterjira.api.function.CommentFunction;
 import pl.edu.amu.wmi.betterjira.api.function.data.Comment;
 import pl.edu.amu.wmi.betterjira.api.function.data.CommentsList;
 import pl.edu.amu.wmi.betterjira.api.function.exception.BadResponse;
-import android.app.Activity;
+import pl.edu.amu.wmi.betterjira.pages.Page;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class TaskComments extends Activity implements OnItemClickListener,
+public class CommentsFragment extends Page implements OnItemClickListener,
 	OnClickListener {
     private ListView listView;
     private CommentsAdapter adapter;
@@ -25,26 +29,28 @@ public class TaskComments extends Activity implements OnItemClickListener,
     private String comment;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
-	setContentView(R.layout.page_comments);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	    Bundle savedInstanceState) {
+	View view = inflater.inflate(R.layout.fragment_comments, null);
 
-	listView = (ListView) findViewById(R.id.listView);
+	listView = (ListView) view.findViewById(R.id.listView);
 
-	adapter = new CommentsAdapter(this);
+	adapter = new CommentsAdapter(getActivity());
 	listView.setAdapter(adapter);
 
-	string = getIntent().getExtras().getString("KEY");
+	string = getActivity().getIntent().getExtras().getString("KEY");
 
 	LoadComments loadTasks = new LoadComments();
 	loadTasks.execute();
 
 	listView.setOnItemClickListener(this);
 
-	send = (Button) findViewById(R.id.buttonSend);
+	send = (Button) view.findViewById(R.id.buttonSend);
 	send.setOnClickListener(this);
 
-	editText = (EditText) findViewById(R.id.editTextComment);
+	editText = (EditText) view.findViewById(R.id.editTextComment);
+
+	return view;
     }
 
     private class LoadComments extends AsyncTask<Void, Void, String> {
@@ -112,6 +118,11 @@ public class TaskComments extends Activity implements OnItemClickListener,
 	comment = editText.getText().toString();
 	SendComment sendComment = new SendComment();
 	sendComment.execute();
+    }
+
+    @Override
+    public String getTitle() {
+	return "Comments";
     }
 
 }

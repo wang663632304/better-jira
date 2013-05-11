@@ -1,50 +1,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <!-- Icon of jira project -->
+    <ImageView
+        android:id="@+id/imageViewProjectIcon"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-        <!-- Icon of jira project -->
-        <ImageView
-            android:id="@+id/imageViewProjectIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/project_icon"
-            android:src="@android:drawable/btn_dialog" />
-        <!-- Project name -->
-        <TextView
-            android:id="@+id/textViewProjectName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/project_name"
-            android:layout_toRightOf="@+id/imageViewProjectIcon"
-            android:textSize="18sp" />
-        <!-- Project URL -->
-        <TextView
-            android:id="@+id/textViewUrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewProjectName"
-            android:layout_toRightOf="@+id/imageViewProjectIcon"
-            android:text="@string/url"
-            android:textSize="18sp" />
-        <!-- Project lead -->
-        <TextView
-            android:id="@+id/textViewLead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewUrl"
-            android:layout_toRightOf="@+id/imageViewProjectIcon"
-            android:text="@string/lead"
-            android:textSize="18sp" />
-        <!-- Project Key -->
-        <TextView
-            android:id="@+id/textViewKey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewLead"
-            android:layout_toRightOf="@+id/imageViewProjectIcon"
-            android:text="@string/key"
-            android:textSize="18sp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/test_project" />
+    <!-- Project name -->
+    <TextView
+        android:id="@+id/textViewProjectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imageViewProjectIcon"
+        android:text="Test project"
+        android:textColor="@color/JiraStandardGray"
+        android:textSize="28sp" />
+    <!-- Project URL -->
+    <TextView
+        android:id="@+id/_textViewUrl"
+        style="@style/JiraSubLabel"
+        android:layout_below="@+id/textViewProjectName"
+        android:layout_toRightOf="@+id/imageViewProjectIcon"
+        android:text="URL:" />
+    <TextView
+        android:id="@+id/textViewUrl"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@+id/_textViewUrl"
+        android:layout_toRightOf="@+id/_textViewUrl"
+        android:text="http://example.com:80" />
+    <!-- Project lead -->
+    <TextView
+        android:id="@+id/_textViewLead"
+        style="@style/JiraSubLabel"
+        android:layout_below="@+id/_textViewUrl"
+        android:layout_toRightOf="@+id/imageViewProjectIcon"
+        android:text="@string/lead_" />
+    <TextView
+        android:id="@+id/textViewLead"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/_textViewLead"
+        android:layout_toRightOf="@+id/_textViewLead"
+        android:drawableLeft="@android:drawable/checkbox_off_background"
+        android:text="Test User" />
+    <!-- Project Key -->
+    <TextView
+        android:id="@+id/_textViewKey"
+        style="@style/JiraSubLabel"
+        android:layout_below="@+id/_textViewLead"
+        android:layout_toRightOf="@+id/imageViewProjectIcon"
+        android:text="@string/key_" />
+    <TextView
+        android:id="@+id/textViewKey"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/_textViewKey"
+        android:layout_toRightOf="@+id/_textViewKey"
+        android:text="TEST" />
 </RelativeLayout>

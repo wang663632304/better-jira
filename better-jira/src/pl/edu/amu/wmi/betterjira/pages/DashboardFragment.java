@@ -2,16 +2,20 @@ package pl.edu.amu.wmi.betterjira.pages;
 
 import pl.edu.amu.wmi.betterjira.R;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TaskFullInfoFragment extends Fragment {
+public class DashboardFragment extends Page {
+
+    @Override
+    public String getTitle() {
+	return "Dashboard";
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	    Bundle savedInstanceState) {
-
-	return inflater.inflate(R.layout.fragment_task_full_info, container);
+	return inflater.inflate(R.layout.not_implemented, null);
     }
 }
