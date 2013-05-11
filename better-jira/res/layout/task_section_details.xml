@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/_textViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/_textViewLabel"
+            style="@style/JiraLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/details" />
+        <View
+            style="@style/Divider"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/_textViewType"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewLabel"
+        android:layout_marginBottom="5dp"
+        android:text="@string/type_" />
+    <TextView
+        android:id="@+id/textViewType"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewType"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewType"
+        android:drawableLeft="@drawable/test_issue"
+        android:text="Task"
+        android:textColor="@color/Black" />
+    <TextView
+        android:id="@+id/_textViewPriority"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewType"
+        android:layout_marginBottom="5dp"
+        android:text="@string/priority_" />
+    <TextView
+        android:id="@+id/textViewPriority"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewPriority"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewPriority"
+        android:drawableLeft="@drawable/test_priority"
+        android:text="Major"
+        android:textColor="@color/Black" />
+    <TextView
+        android:id="@+id/_textViewStatus"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewPriority"
+        android:layout_marginBottom="5dp"
+        android:text="@string/status_" />
+    <TextView
+        android:id="@+id/textViewStatus"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewStatus"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewStatus"
+        android:text="Open"
+        android:textColor="@color/Black" />
+    <TextView
+        android:id="@+id/_textViewResolution"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewStatus"
+        android:layout_marginBottom="5dp"
+        android:text="@string/resolution_" />
+    <TextView
+        android:id="@+id/textViewResolution"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewResolution"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewResolution"
+        android:drawableLeft="@drawable/test_resolution"
+        android:text="Unresolved"
+        android:textColor="@color/Black" />
+</RelativeLayout>

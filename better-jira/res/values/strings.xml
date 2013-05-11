@@ -38,5 +38,17 @@
     <string name="assigne">Assigne</string>
     <string name="reporter">Reporter</string>
     <string name="filter_name">Filter name</string>
-    <string name="filter">JQL JQL JQL JQL</string>    
+    <string name="filter">JQL JQL JQL JQL</string>
+    <string name="people">People</string>
+    <string name="assignee_">Assignee:</string>
+    <string name="reporter_">Reporter:</string>
+    <string name="details">Details</string>
+    <string name="type_">Type:</string>
+    <string name="priority_">Priority:</string>
+    <string name="status_">Status:</string>
+    <string name="resolution_">Resolution:</string>
+    <string name="click_to_add_description">Click to add description</string>
+    <string name="dates">Dates</string>
+    <string name="created_">Created:</string>
+    <string name="updated_">Updated:</string>    
 </resources>

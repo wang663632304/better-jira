@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/_textViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/_textViewLabel"
+            style="@style/JiraLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/people" />
+        <View
+            style="@style/Divider"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/_textViewAssignee"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewLabel"
+        android:layout_marginBottom="5dp"
+        android:text="@string/assignee_" />
+    <TextView
+        android:id="@+id/textViewAssignee"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewAssignee"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewAssignee"
+        android:text="Test User"
+        android:textColor="@color/Black" />
+    
+        <TextView
+        android:id="@+id/_textViewReporter"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewAssignee"
+        android:layout_marginBottom="5dp"
+        android:text="@string/reporter_" />
+    <TextView
+        android:id="@+id/textViewReporter"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewReporter"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewReporter"
+        android:text="Test User"
+        android:textColor="@color/Black" />
+</RelativeLayout>

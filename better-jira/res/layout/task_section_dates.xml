@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/_textViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/_textViewLabel"
+            style="@style/JiraLabel"
+            android:text="@string/dates" />
+        <View
+            style="@style/Divider"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/_textViewCreated"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewLabel"
+        android:layout_marginBottom="5dp"
+        android:text="@string/created_" />
+    <TextView
+        android:id="@+id/textViewCreated"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewCreated"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewCreated"
+        android:text="27/Apr/13 11:54 AM"
+        android:textColor="@color/Black" />
+    <TextView
+        android:id="@+id/_textViewUpdated"
+        style="@style/JiraSubLabel"
+        android:layout_below="@id/_textViewCreated"
+        android:layout_marginBottom="5dp"
+        android:text="@string/updated_" />
+    <TextView
+        android:id="@+id/textViewUpdated"
+        style="@style/JiraSubLabel"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/_textViewUpdated"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/_textViewUpdated"
+        android:text="30/Apr/13 9:22 AM"
+        android:textColor="@color/Black" />
+</RelativeLayout>
