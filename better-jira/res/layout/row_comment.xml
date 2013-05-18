@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:paddingLeft="5dp"
-            android:text="@string/komentator"
+            android:text="@string/commentator"
             android:textAppearance="?android:attr/textAppearanceSmall" />
         <!-- Date of comment -->
         <TextView
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:paddingRight="5dp"
-            android:text="@string/data_kom" />
+            android:text="@string/comment_data" />
     </RelativeLayout>
     <!-- Comment shown in row -->
     <TextView
@@ -31,6 +31,6 @@
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="@string/komentarz"
+        android:text="@string/comment"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 </LinearLayout>
