@@ -2,17 +2,12 @@ package pl.edu.amu.wmi.betterjira.pages.issue;
 
 import pl.edu.amu.wmi.betterjira.BetterJiraApplication;
 import pl.edu.amu.wmi.betterjira.PageIndicatorActivity;
-import pl.edu.amu.wmi.betterjira.R;
-import pl.edu.amu.wmi.betterjira.R.id;
-import pl.edu.amu.wmi.betterjira.R.layout;
 import pl.edu.amu.wmi.betterjira.api.function.SearchForIssues;
 import pl.edu.amu.wmi.betterjira.api.function.data.Issue;
 import pl.edu.amu.wmi.betterjira.api.function.data.IssueList;
 import pl.edu.amu.wmi.betterjira.api.function.exception.BadResponse;
 import pl.edu.amu.wmi.betterjira.api.function.exception.InvalidJQLCommand;
 import pl.edu.amu.wmi.betterjira.pages.Page;
-import pl.edu.amu.wmi.betterjira.pages.issue.comment.CommentsFragment;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -90,7 +85,7 @@ public class IssueListFragment extends Page implements OnItemClickListener {
 	Issue issue = (Issue) adapter.getItem(index);
 
 	Intent intent = new Intent(getActivity(), PageIndicatorActivity.class);
-	intent.putExtra(IssueFullInfoFragment.EXTRA_ISSUE_KEY, issue.getKey());
+	intent.putExtra(IssueFullInfoFragment.EXTRA_STRING_ISSUE_KEY, issue.getKey());
 	intent.putExtra(PageIndicatorActivity.EXTRA_TREE_NODE, getClass()
 		.getSimpleName());
 	startActivity(intent);

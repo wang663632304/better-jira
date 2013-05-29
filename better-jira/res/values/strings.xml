@@ -37,5 +37,8 @@
     <string name="app_name">Better Jira</string>
     <string name="invalid_url">Invalid URL</string>
     <string name="enter_login">Enter login</string>
-    <string name="enter_password">Enter password</string>    
+    <string name="enter_password">Enter password</string>
+    <string name="start_working">Start Working</string>
+    <string name="working_on_issue">Working on issue: %s</string>
+    <string name="stop_working">Stop Working</string>    
 </resources>

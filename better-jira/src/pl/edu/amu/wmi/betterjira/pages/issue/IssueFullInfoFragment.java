@@ -11,12 +11,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
 import android.widget.TextView;
 
 public class IssueFullInfoFragment extends Page {
 
-    public static final String EXTRA_ISSUE_KEY = "issue_key";
+    public static final String EXTRA_STRING_ISSUE_KEY = "issue_key";
     private String issueKey;
 
     @Override
@@ -24,7 +23,7 @@ public class IssueFullInfoFragment extends Page {
 	    Bundle savedInstanceState) {
 
 	issueKey = getActivity().getIntent().getExtras()
-		.getString(EXTRA_ISSUE_KEY);
+		.getString(EXTRA_STRING_ISSUE_KEY);
 
 	new GetIssueAsync().execute();// TODO refactor + fix bug
 
@@ -69,5 +68,6 @@ public class IssueFullInfoFragment extends Page {
 	BJEditText editText = (BJEditText) getView().findViewById(
 		R.id.bjeditTextDescription);
 	editText.setText(issue.getDescription());
+
     }
 }
