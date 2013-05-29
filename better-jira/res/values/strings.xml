@@ -33,5 +33,9 @@
     <string name="updated_">Updated:</string>
     <string name="key_">KEY:</string>
     <string name="time_spent_">Time Spent:</string>
-    <string name="logged_work_">Logged work:</string>    
+    <string name="logged_work_">Logged work:</string>
+    <string name="app_name">Better Jira</string>
+    <string name="invalid_url">Invalid URL</string>
+    <string name="enter_login">Enter login</string>
+    <string name="enter_password">Enter password</string>    
 </resources>
