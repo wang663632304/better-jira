@@ -7,6 +7,7 @@ import pl.edu.amu.wmi.betterjira.api.function.data.Comment;
 import pl.edu.amu.wmi.betterjira.api.function.data.CommentsList;
 import pl.edu.amu.wmi.betterjira.api.function.exception.BadResponse;
 import pl.edu.amu.wmi.betterjira.pages.Page;
+import pl.edu.amu.wmi.betterjira.pages.issue.IssueFullInfoFragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -38,7 +39,8 @@ public class CommentsFragment extends Page implements OnItemClickListener,
 	adapter = new CommentsAdapter(getActivity());
 	listView.setAdapter(adapter);
 
-	string = getActivity().getIntent().getExtras().getString("KEY");
+	string = getActivity().getIntent().getExtras()
+		.getString(IssueFullInfoFragment.EXTRA_STRING_ISSUE_KEY);
 
 	LoadComments loadTasks = new LoadComments();
 	loadTasks.execute();

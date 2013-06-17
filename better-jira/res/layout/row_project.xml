@@ -5,8 +5,8 @@
     <!-- Icon of jira project -->
     <ImageView
         android:id="@+id/imageViewProjectIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_margin="10dp"
@@ -36,26 +36,33 @@
         android:layout_toRightOf="@+id/_textViewUrl"
         android:text="http://example.com:80" />
     <!-- Project lead -->
-    <TextView
-        android:id="@+id/_textViewLead"
-        style="@style/JiraSubLabel"
-        android:layout_below="@+id/_textViewUrl"
-        android:layout_toRightOf="@+id/imageViewProjectIcon"
-        android:text="@string/lead_" />
-    <TextView
-        android:id="@+id/textViewLead"
-        style="@style/JiraSubLabel"
+    <LinearLayout
+        android:id="@+id/here_i_am_lol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/_textViewLead"
-        android:layout_toRightOf="@+id/_textViewLead"
-        android:drawableLeft="@android:drawable/checkbox_off_background"
-        android:text="Test User" />
+        android:layout_below="@+id/_textViewUrl"
+        android:layout_toRightOf="@+id/imageViewProjectIcon" >
+        <TextView
+            android:id="@+id/_textViewLead"
+            style="@style/JiraSubLabel"
+            android:text="@string/lead_" />
+        <ImageView
+            android:id="@+id/imageViewLeadAvatar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/abs__ab_bottom_solid_dark_holo" />
+        <TextView
+            android:id="@+id/textViewLead"
+            style="@style/JiraSubLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test User" />
+    </LinearLayout>
     <!-- Project Key -->
     <TextView
         android:id="@+id/_textViewKey"
         style="@style/JiraSubLabel"
-        android:layout_below="@+id/_textViewLead"
+        android:layout_below="@+id/here_i_am_lol"
         android:layout_toRightOf="@+id/imageViewProjectIcon"
         android:text="@string/key_" />
     <TextView

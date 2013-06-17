@@ -10,17 +10,45 @@
         android:text="@string/key_issue"
         android:textSize="18sp" />
     <!-- Assigne name -->
-    <TextView
-        android:id="@+id/textViewAssigne"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/assigne"
-        android:textSize="18sp" />
+        android:layout_below="@+id/_textViewUrl"
+        android:layout_toRightOf="@+id/imageViewProjectIcon" >
+        <TextView
+            style="@style/JiraSubLabel"
+            android:text="@string/assigne" />
+        <ImageView
+            android:id="@+id/imageViewAssigne"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/abs__ab_bottom_solid_dark_holo" />
+        <TextView
+            android:id="@+id/textViewAssigne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textSize="18sp" />
+    </LinearLayout>
     <!-- Reporter name -->
-    <TextView
-        android:id="@+id/textViewReporter"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reporter"
-        android:textSize="18sp" />
+        android:layout_below="@+id/_textViewUrl"
+        android:layout_toRightOf="@+id/imageViewProjectIcon" >
+        <TextView
+            style="@style/JiraSubLabel"
+            android:text="@string/reporter" />
+        <ImageView
+            android:id="@+id/imageViewReporter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/abs__ab_bottom_solid_dark_holo" />
+        <TextView
+            android:id="@+id/textViewReporter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reporter"
+            android:textSize="18sp" />
+    </LinearLayout>
 </LinearLayout>

@@ -69,5 +69,11 @@ public class IssueFullInfoFragment extends Page {
 		R.id.bjeditTextDescription);
 	editText.setText(issue.getDescription());
 
+	textView = (TextView) getView().findViewById(R.id.textViewAssignee);
+	textView.setText(issue.getAssignee().getDisplayName());
+
+	textView = (TextView) getView().findViewById(R.id.textViewReporter);
+	textView.setText(issue.getReporter().getDisplayName());
+
     }
 }

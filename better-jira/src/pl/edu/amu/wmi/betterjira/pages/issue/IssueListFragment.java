@@ -61,7 +61,7 @@ public class IssueListFragment extends Page implements OnItemClickListener {
 	    SearchForIssues searchForIssues = new SearchForIssues(
 		    BetterJiraApplication.getSession());
 	    try {
-		search = searchForIssues.search(jql, 0, 50);
+		search = searchForIssues.search(jql, 0, 150);
 
 	    } catch (InvalidJQLCommand e) {
 		e.printStackTrace();

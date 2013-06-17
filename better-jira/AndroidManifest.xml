@@ -26,5 +26,9 @@
             android:name="pl.edu.amu.wmi.betterjira.PageIndicatorActivity"
             android:configChanges="orientation|keyboardHidden" >
         </activity>
+        <activity
+            android:name="pl.edu.amu.wmi.betterjira.pages.filter.EditFilterActivity"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>
     </application>
 </manifest>

@@ -2,7 +2,9 @@ package pl.edu.amu.wmi.betterjira.pages.project;
 
 import java.util.ArrayList;
 
+import pl.edu.amu.wmi.betterjira.AsyncTaskWorker;
 import pl.edu.amu.wmi.betterjira.BaseAdapterSnippet;
+import pl.edu.amu.wmi.betterjira.LazyLoadBitmap;
 import pl.edu.amu.wmi.betterjira.R;
 import pl.edu.amu.wmi.betterjira.api.function.data.Project;
 import android.content.Context;
@@ -45,9 +47,20 @@ public class ProjectsAdapter extends BaseAdapterSnippet {
 
 	holder.textViewProjectName.setText(project.getName());
 	holder.textViewKey.setText(project.getKey());
-	// TODO implement project lead
-	// TODO implement project URL
-	// TODO implement project image
+	holder.textViewLead.setText(project.getLead().getDisplayName());
+	holder.textViewUrl.setText(project.getUrl());
+
+	AsyncTaskWorker.createAndRun(view.getContext(),
+		new LazyLoadBitmap(view.getContext(),
+			holder.imageViewProjectIcon, null, project
+				.getAvatarUrls().getBestQualityUrl(),
+			android.R.drawable.progress_horizontal));
+
+	AsyncTaskWorker.createAndRun(view.getContext(),
+		new LazyLoadBitmap(view.getContext(),
+			holder.imageViewLeadAvatar, null, project.getLead()
+				.getAvatarUrls().getBestQualityUrl(),
+			android.R.drawable.progress_horizontal));
     }
 
     @Override
@@ -61,6 +74,8 @@ public class ProjectsAdapter extends BaseAdapterSnippet {
 	holder.textViewKey = (TextView) view.findViewById(R.id.textViewKey);
 	holder.imageViewProjectIcon = (ImageView) view
 		.findViewById(R.id.imageViewProjectIcon);
+	holder.imageViewLeadAvatar = (ImageView) view
+		.findViewById(R.id.imageViewLeadAvatar);
     }
 
     private static class Holder {
@@ -69,6 +84,7 @@ public class ProjectsAdapter extends BaseAdapterSnippet {
 	public TextView textViewLead;
 	public TextView textViewKey;
 	public ImageView imageViewProjectIcon;
+	public ImageView imageViewLeadAvatar;
     }
 
     public void addAll(ArrayList<Project> projects) {

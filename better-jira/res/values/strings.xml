@@ -40,5 +40,11 @@
     <string name="enter_password">Enter password</string>
     <string name="start_working">Start Working</string>
     <string name="working_on_issue">Working on issue: %s</string>
-    <string name="stop_working">Stop Working</string>    
+    <string name="stop_working">Stop Working</string>
+    <string name="filter_name">Name</string>
+    <string name="filter_description">Description</string>
+    <string name="jql">JQL</string>
+    <string name="is_favorite">Is favorite</string>
+    <string name="create_new_filter">Create new filter</string>
+    <string name="worked_">Worked: 0m</string>    
 </resources>

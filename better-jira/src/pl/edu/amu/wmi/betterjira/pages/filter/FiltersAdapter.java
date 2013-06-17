@@ -66,4 +66,9 @@ public class FiltersAdapter extends BaseAdapterSnippet {
 	notifyDataSetChanged();
 	return addAll;
     }
+
+    public void clear() {
+	this.filters.clear();
+	notifyDataSetChanged();
+    }
 }

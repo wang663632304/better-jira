@@ -8,6 +8,7 @@ import pl.edu.amu.wmi.betterjira.pages.Page;
 import pl.edu.amu.wmi.betterjira.pages.filter.FiltersFragment;
 import pl.edu.amu.wmi.betterjira.pages.issue.IssueFullInfoFragment;
 import pl.edu.amu.wmi.betterjira.pages.issue.IssueListFragment;
+import pl.edu.amu.wmi.betterjira.pages.issue.comment.CommentsFragment;
 import pl.edu.amu.wmi.betterjira.pages.project.ProjectsFragment;
 import pl.edu.amu.wmi.betterjira.pages.timer.TimerFragment;
 import android.util.Log;
@@ -28,7 +29,11 @@ public class TreeNodeManager {
 	    pagesInNode.add(new FiltersFragment());
 	} else if (node.equals(IssueListFragment.class.getSimpleName())) {
 	    pagesInNode.add(new IssueFullInfoFragment());
+	    pagesInNode.add(new CommentsFragment());
 	    pagesInNode.add(new TimerFragment());
+	} else if (node.equals(ProjectsFragment.class.getSimpleName())) {
+	    pagesInNode.add(new IssueListFragment());
+	    pagesInNode.add(new FiltersFragment());
 	} else {
 	    Log.e("TreeNodeManager", "I don't know any nodes for this node: "
 		    + node);

@@ -59,6 +59,7 @@ public class LoginActivity extends SherlockActivity implements OnClickListener {
 	autoCompleteTextViewLogin = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewLogin);
 	editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
+
 	buttonLogin = (Button) findViewById(R.id.buttonLogin);
 	buttonLogin.setOnClickListener(this);
 
@@ -136,6 +137,10 @@ public class LoginActivity extends SherlockActivity implements OnClickListener {
 			editTextPassword.getText().toString());
 
 		BetterJiraApplication.setSession(session);
+
+		if (session == null) {
+		    return "Login failed";
+		}
 
 	    } catch (LoginException e) {
 		e.printStackTrace();
